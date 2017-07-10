@@ -16,10 +16,11 @@ module LifeAppliance
     # -- all .rb files in that directory are automatically loaded.
 
    ActionMailer::Base.smtp_settings = {
-        :address        => "mail.svenskadomaner.se",
-        :port           =>  465,
+        :address        => "smtp.gmail.com",
+        :domain         => "smtp.google.com",
+        :port           =>  587,
         :user_name      => "hello@lifeappliance.cc",
-        :password       => "Ruby5379902",
+        :password       => "RubyMatin5379902",
         :authentication =>  'login',
         :enable_starttls_auto => true
     }

@@ -9,5 +9,6 @@ Rails.application.routes.draw do
                  registration:    'register',
                  sign_up:         'sign_up'
              }
-  root 'welcome#login'
+  root 'welcome#index'
+  get 'demo', to: 'welcome#login'
 end

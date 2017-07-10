@@ -1,35 +1,31 @@
-<div class="layout">
-  <div class="post-intro">
-    <div class="header">
-      <div class="background-gradient"></div>
+<div class="header">
+<header class="nav">
+  <div class="container">
+    <div class="nav-left">
+      <a href="#" class="nav-item">
+        <%= image_tag("logo/android-icon-96x96.png" , class: 'logo') %>
+      </a>
+    </div>
+      <% if user_signed_in? %>
+          <span class="nav-item">
+            <%= link_to('Logout', destroy_user_session_path, method: :delete ,class:'button is-success') %>
+          </span>
+      <% else %>
+          <span class="nav-item">
+                <%= link_to("Sign in", new_user_session_url ,class:'button is-success is-inverted') %>
+          </span>
+          <span class="nav-item">
+                <%= link_to("Sign up", new_user_registration_url ,class:'button is-success is-inverted') %>
+          </span>
+      <% end %>
     </div>
   </div>
-  <div class="login">
-    <div class="login-panl">
-
-      <p class="title is-2">Discover the easiest way to manage
-        your social network</p>
-
-      <div class="field">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input" type="text" placeholder="Your email address">
-          <span class="icon is-small is-left">
-          <i class="fa fa-envelope"></i>
-        </p>
-      </div>
-
-      <div class="field">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input" type="password" placeholder="Password">
-          <span class="icon is-small is-left">
-          <i class="fa fa-eye-slash" aria-hidden="true"></i>
-        </p>
-      </div>
-      <div class="block">
-        <a class="button button-SignIn is-primary">Sign In</a>
-        <a class="button button-SignUp is-success is-outlined">Sign Up</a>
-      </div>
-      <a href="#">Forget password</a>
+</header>
+  <div class="card demo">
+    <div class="card-content">
+      <p class="title">
+        please logout the system is on developer-mode and won't respond to you as soon that system is back we are going to notify your via email.
+      </p>
     </div>
   </div>
 </div>
