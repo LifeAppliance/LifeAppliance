@@ -14,5 +14,14 @@ module LifeAppliance
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+   ActionMailer::Base.smtp_settings = {
+        :address        => "mail.svenskadomaner.se",
+        :port           =>  465,
+        :user_name      => "hello@lifeappliance.cc",
+        :password       => "Ruby5379902",
+        :authentication =>  'login',
+        :enable_starttls_auto => true
+    }
   end
 end
