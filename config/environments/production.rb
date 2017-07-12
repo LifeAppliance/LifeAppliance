@@ -62,6 +62,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "LifeAppliance_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.default_url_options = { host: 'life-beta.herokuapp.com' }
   # TODO make username and password Rails_ENV
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
