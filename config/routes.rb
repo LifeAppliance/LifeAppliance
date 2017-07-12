@@ -11,4 +11,6 @@ Rails.application.routes.draw do
              }
   root 'welcome#index'
   get 'demo', to: 'welcome#login'
+  get 'about', to: 'welcome#about'
+  get 'explore', to: 'welcome#not-ready'
 end

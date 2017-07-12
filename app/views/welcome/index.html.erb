@@ -14,15 +14,9 @@
           <span>Explore</span>
         </span>
         <div class="nav-right nav-menu">
-          <a class="nav-item is-active">
-            Home
-          </a>
-          <a class="nav-item">
-            About us
-          </a>
-          <a class="nav-item">
-            Explore
-          </a>
+          <%= link_to('Home', root_path , :class => 'nav-item is-active') %>
+          <%= link_to('About us', about_path , :class => 'nav-item') %>
+          <%= link_to('Explore', explore_path , :class => 'nav-item') %>
           <span class="nav-item">
             <%= link_to("Sign in", new_user_session_url ,class:'button is-success is-inverted') %>
           </span>
