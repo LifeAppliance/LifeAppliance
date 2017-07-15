@@ -64,4 +64,7 @@ Rails.application.configure do
       authentication:       'plain',
       enable_starttls_auto: true  }
 
+
+  # ImageMagick Config
+  Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
 end
