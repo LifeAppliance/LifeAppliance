@@ -14,5 +14,18 @@ module LifeAppliance
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    #Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource(
+            '*',
+            headers: :any,
+            methods: [:get, :patch , :put , :delete, :post, :options]
+        )
+      end
+    end
+
   end
 end
